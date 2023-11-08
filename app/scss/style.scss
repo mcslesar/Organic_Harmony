@@ -39,10 +39,68 @@
         display: flex;
         gap: 20px;
     }
+}
 
-    &__item {
-        
+.preview {
+    background-color: $pink;
+    &__container {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url("../images/decoration_left.webp");
+            background-repeat: no-repeat;
+            width: 250px;
+            height: 276px;
+            left: -5px;
+            top: 0;
+        }
     }
 
- 
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 772px;
+        padding: 147px 0 133px 140px;
+    }
+
+    &__title {
+        font-family: "Sedan", sans-serif;
+        font-size: 96px;
+        font-weight: 400;
+    }
+
+    &__subtitle {
+        align-self: flex-end;
+        color: $green;
+        font-size: 24px;
+        margin-bottom: 52px;
+    }
+
+    &__text {
+        line-height: 30px;
+        max-width: 658px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-self: center;
+        margin-bottom: 82px;
+    }
+    &__btn{
+        align-self: flex-start;
+        
+    }
+    &__image-top{
+        position: absolute;
+        top:20px;
+        z-index: 2;
+        right: 0;
+    }
+    &__image-bottom{
+        position: absolute;
+        bottom:0px;
+        right: 25%;
+        z-index: 1;
+    }
 }

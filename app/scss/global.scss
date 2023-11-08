@@ -5,6 +5,10 @@ body {
     color: $brown;
     box-sizing: border-box;
 }
+h1,h2,h3,h4,h5,h6, p{
+    margin: 0;
+    padding: 0;
+}
 img {
     display: block;
 }
@@ -25,4 +29,13 @@ a {
     max-width: 1360px;
     padding: 0 10px;
     margin: 0 auto;
+}
+.main_btn{
+    padding: 30px 42px;
+    background-color: $green;
+    border-radius: 50px;
+    max-width: 406px;
+    border: none;
+    font-size: 24px;
+    color: $white;
 }
