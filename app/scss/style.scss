@@ -1,2 +1,48 @@
-@import "fonts.scss";
 @import "const.scss";
+@import "normalize.scss";
+@import "global.scss";
+@import "fonts.scss";
+
+
+.header {
+    padding: 37px 0px;
+    background-color: $pink;
+
+    &__container {
+        display: flex;
+        gap: 118px;
+        align-items: center;
+
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: space-between;
+
+    }
+}
+
+.nav {
+    &__list {
+        align-items: center;
+        display: flex;
+        gap: 28px;
+        max-width: 660px;
+    }
+}
+
+.social {
+    &__list {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+    }
+
+    &__item {
+        
+    }
+
+ 
+}

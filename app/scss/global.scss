@@ -1,0 +1,28 @@
+body {
+    font-family: "Comfortaa", "sans-serif";
+    font-size: 20px;
+    line-height: normal;
+    color: $brown;
+    box-sizing: border-box;
+}
+img {
+    display: block;
+}
+a{
+    display: block;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.container{
+    max-width: 1360px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
