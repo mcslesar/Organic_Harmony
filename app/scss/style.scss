@@ -43,6 +43,7 @@
 
 .preview {
     background-color: $pink;
+    padding-bottom: 84px;
     &__container {
         position: relative;
 
@@ -62,7 +63,7 @@
         display: flex;
         flex-direction: column;
         max-width: 772px;
-        padding: 147px 0 133px 140px;
+        padding: 147px 0 133px 90px;
     }
 
     &__title {
@@ -87,20 +88,65 @@
         align-self: center;
         margin-bottom: 82px;
     }
-    &__btn{
+
+    &__btn {
         align-self: flex-start;
+
+    }
+
+    &__image-top {
+        position: absolute;
+        top: 68px;
+        z-index: 2;
+        right: 20px;
+    }
+
+    &__image-bottom {
+        position: absolute;
+        bottom: 0px;
+        right: 30%;
+        z-index: 1;
+    }
+}
+
+.about {
+    padding-bottom: 84px;
+    background-color: $lightPink;
+    span:last-child{
+        align-self: flex-end;
+    }
+    &__title{
+        display: flex;
+        flex-direction: column;
+        padding-top: 85px;
+        padding-left: 114px;
+        max-width: 850px;
+        margin-bottom: 125px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 132px;
+        padding-left: 40px;
+
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        max-width: 245px;
         
     }
-    &__image-top{
-        position: absolute;
-        top:20px;
-        z-index: 2;
-        right: 0;
-    }
-    &__image-bottom{
-        position: absolute;
-        bottom:0px;
-        right: 25%;
-        z-index: 1;
+
+    &__item {
+        position: relative;
+
+        &::before {
+            content: url(../images/marker_leaf.svg);
+            position: absolute;
+            left: -60px;
+            top: 0;
+        }
     }
 }
