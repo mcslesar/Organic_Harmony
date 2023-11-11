@@ -1,12 +1,27 @@
 const swiper = new Swiper('.bestseller__swiper', {
     // Optional parameters
-    slidesPerView: 3,
+    slidesPerView: 2.9,
+    spaceBetween: 50,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     pagination: {
         el: '.swiper-pagination',
+        type: 'bullets',
+    },
+});
+
+const swiperSecond = new Swiper('.review__swiper', {
+    // Optional parameters
+    spaceBetween: 53,
+    slidesPerView:3,
+    navigation: {
+        nextEl: '.review__next',
+        prevEl: '.review__prev',
+    },
+    pagination: {
+        el: '.review__pag',
         type: 'bullets',
     },
 });
