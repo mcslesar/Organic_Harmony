@@ -32,6 +32,10 @@
         gap: 28px;
         max-width: 660px;
     }
+
+    &__link {
+        transition: color 0.3s ease;
+    }
 }
 
 .social {
@@ -239,6 +243,7 @@
     width: 60px;
     height: 60px;
     margin-top: 0;
+    transition: 0.3s all ease;
 }
 
 .swiper-button-next::after {
@@ -362,7 +367,7 @@
         background: transparent;
         padding: 24px 32px;
         border: none;
-
+        transition: 0.3s all ease;
 
         &-text {
             text-align: left;
@@ -388,6 +393,7 @@
                 height: 3px;
                 background-color: $brown;
                 transform: translateY(-50%);
+                transition: 0.5s all ease;
             }
 
             &::before {
@@ -506,9 +512,11 @@
     font-weight: 700;
     margin-bottom: 12px;
 }
-.contact__link{
+
+.contact__link {
     margin-bottom: 50px;
 }
+
 .contact {
     padding: 85px 0 169px 0;
     background-color: $lightPink;
@@ -527,60 +535,73 @@
         display: flex;
         justify-content: space-between;
     }
-    &__list{
+
+    &__list {
         margin-bottom: 50px;
     }
+
     &__name {
         font-weight: 700;
-        &>a{
-        margin-top: 12px;
+
+        &>a {
+            margin-top: 12px;
         }
     }
 
-    &__adress-list{
+    &__adress-list {
         list-style-type: disc;
-        padding-left: 40px ;
+        padding-left: 40px;
         margin-bottom: 94px;
     }
-    &__adress-item:not(:last-child){
+
+    &__adress-item:not(:last-child) {
         margin-bottom: 15px;
     }
-    &__link{
+
+    &__link {
         position: relative;
     }
 }
-.phone{
+
+.phone {
     padding-left: 28px;
-    &::before{
-    content: url(../images/call_icon.svg);
-    position: absolute;
-    top: 0;
-    left: 0;
+
+    &::before {
+        content: url(../images/call_icon.svg);
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
 
-.footer{
+.footer {
     background-color: $pink;
-    &__container{
+
+    &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 175px;
         padding: 122px 50px;
     }
-    &__info{
+
+    &__info {
         flex-grow: 1;
     }
-    &__nav{
+
+    &__nav {
         flex-grow: 1;
     }
-    &__logo{
+
+    &__logo {
         margin-bottom: 20px;
     }
-    &__adress{
+
+    &__adress {
         margin-bottom: 10px;
     }
-    &__list{
+
+    &__list {
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -589,9 +610,78 @@
         height: 175px;
         justify-content: center;
     }
-    &__social-list{
+
+    &__social-list {
         display: flex;
         flex-grow: 3;
         justify-content: flex-end;
     }
 }
+
+
+.modal-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.modal-overlay--visible{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+}
+.modal {
+    padding: 85px 61px 75px;
+    background-color: $pink;
+    max-width: 531px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+
+    &__title {
+        text-align: center;
+        max-width: 437px;
+        margin-bottom: 35px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__input {
+        margin-bottom: 29px;
+        padding: 20px 20px;
+        border-radius: 10px;
+        border: 1px solid $lightBrown;
+        background-color: transparent;
+        width: 400px;
+    }
+
+    &__text {
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+
+    &__btn {
+        padding: 21px 43px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &--visible{
+        display: flex;
+    }
+}
+
+@import "dynamic.scss";

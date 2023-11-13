@@ -5,7 +5,11 @@ body {
     color: $brown;
     box-sizing: border-box;
 }
-
+svg{
+    path{
+        transition: 0.3s all ease;
+    }
+}
 h1,
 h2,
 h3,
@@ -55,6 +59,7 @@ a {
     font-size: 24px;
     color: $white;
     cursor: pointer;
+    transition: background-color 0.3s ease ;
 }
 
 .section-title {

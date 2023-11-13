@@ -1,0 +1,77 @@
+.main_btn {
+    &:hover {
+        background-color: $lightGreen;
+    }
+
+    &:active {
+        background-color: $lightGreen;
+        box-shadow: 4px 4px 6px 0px rgba(53, 82, 7, 0.32) inset;
+    }
+}
+
+.swiper-button-next:hover {
+    &::after {
+        content: url("../images/arrow_next_hover.svg");
+    }
+}
+
+.swiper-button-next:active {
+    &::after {
+        content: url("../images/arrow_next_active.svg");
+    }
+}
+
+.swiper-button-prev:hover {
+    &::after {
+        content: url("../images/arrow_prev_hover.svg");
+    }
+}
+
+.swiper-button-prev:active {
+    &::after {
+        content: url("../images/arrow_prev_active.svg");
+    }
+}
+
+.social__link:hover {
+    svg {
+        path {
+            fill: $lightGreen;
+        }
+    }
+}
+
+.social__link:active {
+    svg {
+        path {
+            fill: $darkGreen;
+        }
+    }
+}
+
+.nav__link,
+.footer__item-link {
+    &:hover {
+        color: $lightGreen;
+    }
+
+    &:active {
+        color: $darkGreen;
+    }
+}
+
+.faq__btn:hover {
+    span {
+        color: $lightGreen;
+    }
+
+    .faq__btn-plus {
+        &::before {
+            background-color: $lightGreen;
+        }
+
+        &::after {
+            background-color: $lightGreen;
+        }
+    }
+}

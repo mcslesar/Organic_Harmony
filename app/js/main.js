@@ -15,7 +15,7 @@ const swiper = new Swiper('.bestseller__swiper', {
 const swiperSecond = new Swiper('.review__swiper', {
     // Optional parameters
     spaceBetween: 53,
-    slidesPerView:3,
+    slidesPerView: 3,
     navigation: {
         nextEl: '.review__next',
         prevEl: '.review__prev',
@@ -43,8 +43,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 control.setAttribute('aria-expanded', false);
                 control.setAttribute('aria-hidden', true);
                 content.style.maxHeight = null;
-                
+
             }
         });
     });
+});
+
+
+const btns = document.querySelectorAll('.main_btn');
+const modalOverlay = document.querySelector('.modal-overlay');
+const modals = document.querySelectorAll('.modals');
+btns.forEach((el) => {
+    el.addEventListener('click', (e) => {
+        let path = e.currentTarget.getAttribute('data-path');
+        modals.forEach((el) => {
+            el.classList.remove('modal-overlay--visible');
+        })
+        document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
+        modalOverlay.classList.add('modal-overlay--visible');
+
+    });
+});
+modalOverlay.addEventListener('click', (e) => {
+    if (e.target == modalOverlay) {
+        modalOverlay.classList.remove('modal-overlay--visible');
+        modals.forEach((el) => {
+            el.classList.remove('modal-overlay--visible');
+        })
+    }
 });
