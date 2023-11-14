@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organic Harmony</title>
+    <link rel="stylesheet" href="css/graph-modal.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -60,7 +61,7 @@
                         избавив от необходимости применять химическую косметику</span>
                     <span>Вы можете бесплатно протестировать наши бестселлеры у нас в магазинах:</span>
                 </p>
-                <button class="preview__btn main_btn" data-path="one">Проконсультироваться</button>
+                <button class="preview__btn main_btn" data-graph-path="first">Проконсультироваться</button>
             </div>
             <picture>
                 <source srcset="../images/main_content.avif" type="image/avif">
@@ -221,7 +222,7 @@
                     <div class="swiper-button-next"></div>  
                 </div>
             </div>
-            <button class="bestseller__btn main_btn" data-path="one">Проконсультироваться</button>
+            <button class="bestseller__btn main_btn" data-path="first">Проконсультироваться</button>
         </div>
     </section>
     <section class="faq">
@@ -714,17 +715,28 @@
 
 
 
-<div class="modals">
-    <div class="modal-overlay">
-        <div class="modal modal--1" data-target="one">
-            <h3 class="modal__title">Получить бесплатную консультацию</h3>
-            <input type="text" class="modal__input">
-            <input type="tel" class="modal__input">
-            <p class="modal__text">*Наш менеджер свяжется с Вами</p>
-            <button class="main_btn modal__btn">Проконсультироваться</button>
+<div class="graph-modal">
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="first">
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__content">
+            <!-- контент модального окна -->
+            <h3 class="graph-modal__content__title">Получить бесплатную консультацию</h3>
+            <input type="text" class="graph-modal__content__input " placeholder="Имя" required>
+            <input type="tel" class="graph-modal__content__input " placeholder="Номер телефона" required>
+            <p class="graph-modal__content__text">*Наш менеджер свяжется с Вами</p>
+            <button class="main_btn graph-modal__content__btn" data-graph-path="exit">Проконсультироваться</button>
+        </div>
+    </div>
+    <div class="graph-modal__container exit__container" role="dialog" aria-modal="true" data-graph-target="exit">
+        <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__exit">
+            <!-- контент модального окна -->
+            <h3 class="graph-modal__exit-title">Ваша заявка принята!</h3>
+            <p class="graph-modal__exit-text">Наш менеджер скоро свяжется с Вами!</p>
         </div>
     </div>
 </div>
+<script src="js/graph-modal.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 

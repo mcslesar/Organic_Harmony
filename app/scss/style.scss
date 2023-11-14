@@ -68,7 +68,7 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-        max-width: 772px;
+        max-width: 862px;
         padding: 147px 0 133px 90px;
     }
 
@@ -126,7 +126,7 @@
         flex-direction: column;
         padding-top: 85px;
         padding-left: 114px;
-        max-width: 850px;
+        max-width: 980px;
         margin-bottom: 125px;
     }
 
@@ -169,7 +169,7 @@
     }
 
     &__header {
-        max-width: 1144px;
+
         padding-left: 113px;
         margin-bottom: 130px;
         display: flex;
@@ -296,7 +296,7 @@
     background-color: $lightPink;
 
     &__header {
-        max-width: 710px;
+       
         padding-left: 113px;
         margin-bottom: 130px;
         display: flex;
@@ -522,7 +522,7 @@
     background-color: $lightPink;
 
     &__header {
-        max-width: 1010px;
+    
         padding-left: 113px;
         margin-bottom: 130px;
     }
@@ -618,36 +618,18 @@
     }
 }
 
+.graph-modal__container {
+    max-width: 531px;
+    padding: 0;
+    border-radius: 20px;
+}
 
-.modal-overlay {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    z-index: 10;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-}
-.modal-overlay--visible{
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s ease-in-out;
-}
-.modal {
+.graph-modal__content {
     padding: 85px 61px 75px;
     background-color: $pink;
-    max-width: 531px;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     border-radius: 20px;
 
     &__title {
@@ -679,9 +661,60 @@
         font-weight: 400;
         line-height: normal;
     }
-    &--visible{
+
+    &--visible {
         display: flex;
     }
+
+    &__input {
+        &:invalid:not(:placeholder-shown) {
+            border-color: #C10E0E;
+        }
+    }
+}
+
+.graph-modal__close {
+    background-image: url(../images/exit.svg);
+    width: 25px;
+    height: 25px;
+    right: 20px;
+    top: 20px;
+}
+
+.graph-modal__container {
+
+    background-color: $pink;
+
+}
+
+.exit__container {
+    padding: 85px 45px;
+}
+
+.graph-modal__exit {
+    max-width: 470px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.graph-modal__exit-title {
+    max-width: 330px;
+    text-align: center;
+    font-family: Patrick Hand SC;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 38px;
+}
+
+.graph-modal__exit-text {
+    color: $lightBrown;
+    font-size: 24px;
+    text-align: center;
+    max-width: 330px;
 }
 
 @import "dynamic.scss";
