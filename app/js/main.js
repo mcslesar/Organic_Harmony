@@ -50,3 +50,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const modal = new GraphModal();
+
+const burger = document?.querySelector('[data-burger]');
+const nav = document?.querySelector('[data-nav]');
+const body = document.body;
+const navItems = nav?.querySelectorAll('a');
+burger?.addEventListener('click', () => {
+    body.classList.toggle('disable-scroll');
+    burger?.classList.toggle('burger--active');
+    nav.classList.toggle('header__nav--visible');
+})
+navItems.forEach(el => {
+    el.addEventListener('click', () => {
+        body.classList.remove('disable-scroll');
+        burger?.classList.remove('burger--active');
+        nav.classList.remove('header__nav--visible');
+    })
+})
+
+
+

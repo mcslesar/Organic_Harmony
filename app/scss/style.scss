@@ -31,8 +31,11 @@
         display: flex;
         gap: 28px;
         max-width: 660px;
+        flex-wrap: wrap;
     }
-
+    &__item:last-child{
+        margin-right: 5px;
+    }
     &__link {
         transition: color 0.3s ease;
     }
@@ -718,3 +721,4 @@
 }
 
 @import "dynamic.scss";
+@import "media.scss";

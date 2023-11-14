@@ -1,0 +1,150 @@
+@media (max-width:1300px) {
+
+    .preview__image-bottom {
+        bottom: 60%;
+        right: 0;
+        width: 27%;
+    }
+
+    .preview__image-top {
+        bottom: 0;
+        top: 48%;
+        width: 30%;
+    }
+
+}
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .header__container {
+        display: flex;
+        gap: 50px;
+    }
+
+    .preview__image-top {
+        object-fit: contain;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width:992px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    .header {
+        &__burger {
+            display: block;
+        }
+
+        &__nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 15;
+            background-color: $lightGreen;
+            padding-top: 60px;
+            height: 100vh;
+            width: 100%;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in-out;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 40px;
+            align-items: center;
+
+            &--visible {
+                transform: none;
+            }
+        }
+
+        &__container {
+            justify-content: space-between;
+            gap: 0px;
+        }
+
+
+    }
+
+    .nav__list {
+        flex-direction: column;
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    .social__link {
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    .social__link:hover {
+        svg {
+            path {
+                fill: $lightBrown;
+            }
+        }
+    }
+
+    .social__link:active {
+        svg {
+            path {
+                fill: $brown;
+            }
+        }
+    }
+
+    .nav__link {
+        &:hover {
+            color: $lightBrown;
+        }
+
+        &:active {
+            color: $brown;
+        }
+    }
+
+    .preview__title {
+        font-size: 72px;
+    }
+
+    .section-subtitle {
+        font-size: 20px;
+    }
+
+    .main_btn {
+        padding: 26px 40px;
+        font-size: 20px;
+    }
+
+    .preview__wrapper {
+        padding-bottom: 0;
+    }
+
+    .preview__btn {
+        align-self: center;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+}
