@@ -33,9 +33,11 @@
         max-width: 660px;
         flex-wrap: wrap;
     }
-    &__item:last-child{
+
+    &__item:last-child {
         margin-right: 5px;
     }
+
     &__link {
         transition: color 0.3s ease;
     }
@@ -106,6 +108,7 @@
         top: 68px;
         z-index: 2;
         right: 20px;
+
     }
 
     &__image-bottom {
@@ -117,6 +120,10 @@
 }
 
 .about {
+    picture {
+        margin-right: 10px;
+    }
+
     padding-bottom: 84px;
     background-color: $lightPink;
 
@@ -136,9 +143,6 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        gap: 132px;
-        padding-left: 40px;
-
     }
 
     &__list {
@@ -147,17 +151,24 @@
         gap: 60px;
         max-width: 245px;
 
+
     }
 
     &__item {
         position: relative;
+        padding-left: 60px;
 
         &::before {
             content: url(../images/marker_leaf.svg);
             position: absolute;
-            left: -60px;
+            left: 0;
             top: 0;
         }
+    }
+
+    &__image {
+        width: 100%;
+
     }
 }
 
@@ -299,7 +310,7 @@
     background-color: $lightPink;
 
     &__header {
-       
+
         padding-left: 113px;
         margin-bottom: 130px;
         display: flex;
@@ -525,7 +536,7 @@
     background-color: $lightPink;
 
     &__header {
-    
+
         padding-left: 113px;
         margin-bottom: 130px;
     }

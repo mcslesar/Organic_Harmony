@@ -1,7 +1,7 @@
 const swiper = new Swiper('.bestseller__swiper', {
     // Optional parameters
-    slidesPerView: 2.9,
-    spaceBetween: 50,
+    slidesPerView: 1,
+    spaceBetween: 0,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -10,6 +10,20 @@ const swiper = new Swiper('.bestseller__swiper', {
         el: '.swiper-pagination',
         type: 'bullets',
     },
+    breakpoints: {
+        // when window width is >= 320px
+        576: {
+            slidesPerView: 1.8,
+            spaceBetween: 30,
+        },
+        // when window width is >= 640px
+        992: {
+            slidesPerView: 2.9,
+            spaceBetween: 50,
+        },
+        
+
+    }
 });
 
 const swiperSecond = new Swiper('.review__swiper', {
