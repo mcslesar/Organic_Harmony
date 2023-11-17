@@ -96,14 +96,17 @@
             width: 100%;
         }
     }
-    .footer{
+
+    .footer {
         height: auto;
         padding: 20px 0;
-        &__list{
+
+        &__list {
             flex-grow: 1;
             gap: 10px;
         }
-        &__social-list{
+
+        &__social-list {
             flex-grow: 1;
         }
     }
@@ -431,6 +434,7 @@
 
     .contact {
         padding: 45px 0 45px 0;
+
         &__wrapper {
             flex-direction: column;
             gap: 15px;
@@ -439,10 +443,11 @@
         &__adress {
             order: 1;
         }
-        &__adress-list{
-            margin:0 auto 20px;
+
+        &__adress-list {
+            margin: 0 auto 20px;
             max-width: 400px;
-            
+
         }
 
         &__social {
@@ -451,33 +456,41 @@
             align-items: center;
             flex-direction: column;
         }
-        &__list{
+
+        &__list {
             margin-bottom: 15px;
         }
-        &__link{
+
+        &__link {
             margin-bottom: 15px;
         }
-        &__name{
+
+        &__name {
             text-align: center;
         }
     }
-    .social__name{
+
+    .social__name {
         text-align: center;
     }
-    .footer{
-        &__container{
+
+    .footer {
+        &__container {
             height: auto;
             flex-direction: column;
             padding: 0;
-            
+
         }
-        &__logo{
+
+        &__logo {
             margin: 0 auto 10px;
         }
-        &__adress{
+
+        &__adress {
             text-align: center;
         }
-        &__tel{
+
+        &__tel {
             text-align: center;
         }
     }
@@ -558,6 +571,27 @@
 
         &__wrapper {
             padding: 0;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .graph-modal__content {
+        padding: 20px 10px;
+
+        &__input {
+            width: 270px;
+        }
+
+        &__title {
+            font-size: 18px;
+            max-width: 300px;
+            padding-top: 30px;
+
+        }
+        &__btn{
+            padding: 16px 10px;
+            font-size: 16px;
         }
     }
 }

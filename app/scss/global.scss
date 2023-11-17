@@ -1,9 +1,11 @@
+html,
 body {
     font-family: "Comfortaa", "sans-serif";
     font-size: 20px;
     line-height: normal;
     color: $brown;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 svg {
@@ -23,7 +25,8 @@ p {
     padding: 0;
 }
 
-img, picture {
+img,
+picture {
     display: block;
     margin: 0;
 }
@@ -81,7 +84,7 @@ a {
     left: 0;
     width: 100%;
     height: 2px;
-    
+
     background-color: #462f29;
     transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
 
