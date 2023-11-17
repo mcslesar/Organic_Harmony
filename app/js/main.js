@@ -21,15 +21,15 @@ const swiper = new Swiper('.bestseller__swiper', {
             slidesPerView: 2.9,
             spaceBetween: 50,
         },
-        
+
 
     }
 });
 
 const swiperSecond = new Swiper('.review__swiper', {
     // Optional parameters
-    spaceBetween: 53,
-    slidesPerView: 3,
+    spaceBetween: 50,
+    slidesPerView: 1,
     navigation: {
         nextEl: '.review__next',
         prevEl: '.review__prev',
@@ -38,6 +38,20 @@ const swiperSecond = new Swiper('.review__swiper', {
         el: '.review__pag',
         type: 'bullets',
     },
+    breakpoints: {
+        // when window width is >= 320px
+        992: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        // when window width is >= 640px
+        1265: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
+
+
+    }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
