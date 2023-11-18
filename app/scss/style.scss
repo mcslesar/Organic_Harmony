@@ -265,6 +265,7 @@
     position: absolute;
     width: 60px;
     height: 60px;
+    transition: 0.3s all ease;
 
 }
 
@@ -273,6 +274,7 @@
     position: absolute;
     width: 60px;
     height: 60px;
+    transition: 0.3s all ease;
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -450,6 +452,7 @@
 .review {
     background-color: $pink;
     padding: 85px 0;
+
     &__header {
         max-width: 500px;
         margin-left: 113px;
@@ -697,7 +700,7 @@
 }
 
 .graph-modal__container {
-
+    text-align: center;
     background-color: $pink;
 
 }

@@ -105,11 +105,9 @@ function building() {
     return src([
         'app/css/style.min.css',
         'app/images/*.*',
-        '!app/images/*.svg',
-        'app/images/sprite.svg',
         'app/fonts/*.*',
         'app/js/main.min.js',
-        'app/pages/*.html'
+        'app/*.html'
     ], { base: 'app' })
         .pipe(dest('dist'))
 }
@@ -119,9 +117,8 @@ exports.images = images;
 exports.fonts = fonts;
 exports.pages = pages;
 exports.building = building;
-exports.sprite = sprite;
 exports.scripts = scripts;
 exports.watching = watching;
 
-exports.build = series(cleanDist, building);
+exports.build = series( building);
 exports.default = parallel(styles, images, scripts, pages, watching);
