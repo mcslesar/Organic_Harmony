@@ -14,12 +14,13 @@ const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const svgSprite = require('gulp-svg-sprite');
 const include = require('gulp-include');
+const fileInclude = require('gulp-file-include');
 
 
 function pages() {
     return src('app/pages/*.html')
-        .pipe(include({
-            includePaths: 'app/components'
+        .pipe(fileInclude({
+            basepsath: './app/components'
         }))
         .pipe(dest('app'))
         .pipe(browserSync.stream())

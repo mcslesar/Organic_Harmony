@@ -1,0 +1,22 @@
+[
+    {
+        "text": "О нас",
+        "href": "/#about"
+    },
+    {
+        "text": "Бестселлеры",
+        "href": "/#bestseller"
+    },
+    {
+        "text": "Вопросы",
+        "href": "/#faq"
+    },
+    {
+        "text": "Отзывы",
+        "href": "/#review"
+    },
+    {
+        "text": "Контакты",
+        "href": "/#contact"
+    }
+]

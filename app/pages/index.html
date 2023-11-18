@@ -1,14 +1,32 @@
-<!--=include header.html -->
+<!DOCTYPE html>
+<html lang="en">
 
-<main>
-    <!--=include preview.html -->
-    <!--=include about.html -->
-    <!--=include bestseller.html -->
-    <!--=include faq.html -->
-    <!--=include review.html -->
-    <!--=include contact.html -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Harmony</title>
+    <link rel="stylesheet" href="css/graph-modal.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
 
-</main>
+<body>
+    @@include('../components/header.html')
+    <main>
+        @@include('../components/preview.html')
+        @@include('../components/about.html')
+        @@include('../components/bestseller.html')
+        @@include('../components/faq.html')
+        @@include('../components/review.html')
+        @@include('../components/contact.html')
 
-<!--=include footer.html -->
-<!--=include modal.html -->
+    </main>
+    <footer class="footer">
+        @@include('../components/footer.html')
+    </footer>
+
+    @@include('../components/modal.html')
+    <script src="js/graph-modal.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
